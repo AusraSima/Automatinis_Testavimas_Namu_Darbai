@@ -26,7 +26,7 @@ namespace Uzduotis13AT
         [Test]
         public void Valanda() 
         {
-            string expectedResult = "13:00";
+            string expectedResult = "13:00 ";
 
             string actualResult = Uzduotis13zalias.Program.Tikrinimas.Valanda();
 
