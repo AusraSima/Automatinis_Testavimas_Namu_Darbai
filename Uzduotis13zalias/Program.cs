@@ -15,7 +15,6 @@ namespace Uzduotis13zalias
                     break;
                 default:
                     Console.WriteLine("Test 'Zalias' failed");
-                    Console.WriteLine("Skaicius 995 is 3 be liekanos nesidalija");
                     break;
             }
             Console.WriteLine();
@@ -46,15 +45,7 @@ namespace Uzduotis13zalias
 
             //Bonus: Testas “žalias” jei nuo 1 iki 10 (imtinai) yra 4 lyginiai skaičiai
 
-            int kiekis = 0;
-            for (int i = 1; i <= 10; i++)
-            {
-                if (Tikrinimas.Dalyba(i, 2) == 0)
-                {
-                    kiekis++;
-                }
-            }
-            if (Tikrinimas.ArKeturi(kiekis) == true)
+            if (Tikrinimas.ArKeturi() == true)
             {
                 Console.WriteLine("Zalias, intervale nuo 1 iki 10 imtinai yra 4 lyginiai skaiciai");
             }
@@ -78,21 +69,24 @@ namespace Uzduotis13zalias
             {
                 return DateTime.Now.ToString("h:mm tt");
             }
-            public static bool ArKeturi(int x) 
+            public static bool ArKeturi()
             {
-                if (x == 4)
+                int kiekis = 0;
+                for (int i = 1; i <= 10; i++)
+                {
+                    if (Tikrinimas.Dalyba(i, 2) == 0)
+                    {
+                        kiekis++;
+                    }
+                }
+                if (kiekis == 4) 
                 {
                     return true;
                 }
-                else 
-                { 
+                else
+                {
                     return false;
                 }
-            }
-
-            public static bool ArKeturi()
-            {
-                throw new NotImplementedException();
             }
         }
     }
