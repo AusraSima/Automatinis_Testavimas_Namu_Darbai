@@ -1,11 +1,10 @@
 ﻿using OpenQA.Selenium;
 using System;
 
-
-namespace DemoqaFramework.POM
+namespace DemoqaFramework.POM.DemoqaTextBox
 {
     public class DemoqaTextBox
-    {
+    {       
         public static void Open()
         {
             Driver.OpenPage("https://demoqa.com/text-box");
@@ -63,6 +62,6 @@ namespace DemoqaFramework.POM
         {
             string locator = "//*[@id='submit']";
             Common.Click(locator);
-        }        
+        }
     }
 }

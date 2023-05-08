@@ -1,5 +1,6 @@
 ﻿
 using DemoqaFramework.POM;
+using DemoqaFramework.POM.DemoqaTextBox;
 using NUnit.Framework;
 
 namespace DemoqaTestavimas

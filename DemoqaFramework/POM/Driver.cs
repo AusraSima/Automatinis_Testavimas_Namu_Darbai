@@ -9,7 +9,7 @@ namespace DemoqaFramework.POM
 
         public static void InitializeDriver()
         {
-            IWebDriver driver = new ChromeDriver();
+            driver = new ChromeDriver();
         }
 
         internal static IWebDriver GetDriver() 
