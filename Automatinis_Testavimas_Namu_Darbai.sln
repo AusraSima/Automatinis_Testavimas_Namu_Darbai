@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uzduotis13AT", "Uzduotis13A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Uzduotis13zalias", "Uzduotis13zalias\Uzduotis13zalias.csproj", "{93336034-5674-46AF-80E2-9416BBF5911E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoqaTestavimas", "DemoqaTestavimas\DemoqaTestavimas.csproj", "{F99082B0-580E-410A-95C4-CCE82B50F008}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoqaFramework", "DemoqaFramework\DemoqaFramework.csproj", "{49B0CCCC-186A-490D-810C-37143F3E1597}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{93336034-5674-46AF-80E2-9416BBF5911E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93336034-5674-46AF-80E2-9416BBF5911E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93336034-5674-46AF-80E2-9416BBF5911E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F99082B0-580E-410A-95C4-CCE82B50F008}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F99082B0-580E-410A-95C4-CCE82B50F008}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F99082B0-580E-410A-95C4-CCE82B50F008}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F99082B0-580E-410A-95C4-CCE82B50F008}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49B0CCCC-186A-490D-810C-37143F3E1597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49B0CCCC-186A-490D-810C-37143F3E1597}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49B0CCCC-186A-490D-810C-37143F3E1597}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49B0CCCC-186A-490D-810C-37143F3E1597}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
