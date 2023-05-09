@@ -51,8 +51,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="POM\Common.cs" />
-    <Compile Include="POM\DemoqaTextBox\DemoqaTextBox.cs" />
+    <Compile Include="POM\Demoqa\DemoqaTextBox.cs" />
     <Compile Include="POM\Driver.cs" />
+    <Compile Include="POM\SeleniumEasy\DynamicDataLoadingDemo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
