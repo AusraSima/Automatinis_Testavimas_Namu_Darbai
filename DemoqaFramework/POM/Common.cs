@@ -1,5 +1,7 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Support.Extensions;
 using OpenQA.Selenium.Support.UI;
+using SeleniumExtras.WaitHelpers;
 using System;
 
 namespace DemoqaFramework.POM
@@ -26,11 +28,53 @@ namespace DemoqaFramework.POM
             return GetElement(locator).Text;
         }
 
+        internal static void ScrollUntilElementIsClickable(string locator)
+        {
+            IWebElement element = GetElement(locator);
+
+            bool isClickable = false;
+            int maxTries = 20;
+            int currentTry = 0;
+
+            while (!isClickable)
+            {
+                try
+                {
+                    element.Click();
+                    isClickable = true;
+                }
+                catch (Exception exception)
+                {
+                    if (exception is ElementClickInterceptedException && currentTry < maxTries)
+                    {
+                        Driver.GetDriver().ExecuteJavaScript("window.scrollBy(0, 200)");
+                        currentTry++;
+                    }
+                    else
+                    {
+                        throw exception;
+                    }
+                }
+            }
+        }
+
+        internal static string GetElementCssAttributeValue(string locator, string attribute)
+        {
+            return GetElement(locator).GetCssValue(attribute);
+        }
+
+        internal static void WaitForElementCssAttributeValueToBe(string locator, string attributeName, string expectedAttributeValue)
+        {
+            WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(2));
+            wait.PollingInterval = TimeSpan.FromMilliseconds(50);
+            wait.Until(driver => driver.FindElement(By.XPath(locator)).GetCssValue(attributeName).Equals(expectedAttributeValue));
+        }
+
         internal static void WaitForElementIsVisible(string locator)
         {
-            WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(5));
-            wait.PollingInterval = TimeSpan.FromMilliseconds(50);
-            wait.Until(driver => driver.FindElement(By.XPath("//*[@id='loading']")));
+            WebDriverWait wait = new WebDriverWait(Driver.GetDriver(), TimeSpan.FromSeconds(10));
+            wait.PollingInterval = TimeSpan.FromMilliseconds(50);            
+            wait.Until(driver => driver.PageSource.Contains(locator));
         }
     }
 }

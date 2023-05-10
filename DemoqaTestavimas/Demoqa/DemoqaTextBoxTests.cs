@@ -43,7 +43,7 @@ namespace DemoqaTestavimas
         [TearDown]
         public void TearDown()
         {
-            //Driver.ShutdownDriver();
+            Driver.ShutdownDriver();
         }
     }
 }

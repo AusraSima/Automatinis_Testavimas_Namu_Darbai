@@ -18,9 +18,15 @@ namespace DemoqaTestavimas.SeleniumEasy
 
         [Test]
 
-        public void WaitForUserInformationToAppear()
+        public void WaitForUserInformationToAppear() 
         {
+            string expectedResult = "First name";
+            
             DynamicDataLoadingDemo.ClickGetNewUserButton();
+            
+            string actualResult = DynamicDataLoadingDemo.GetFirstName();
+
+            StringAssert.AreEqualIgnoringCase(actualResult, expectedResult);
         }
 
         [TearDown]

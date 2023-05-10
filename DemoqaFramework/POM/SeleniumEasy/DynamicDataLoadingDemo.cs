@@ -14,7 +14,12 @@ namespace DemoqaFramework.POM.SeleniumEasy
             
             Common.Click(locator);
             Common.WaitForElementIsVisible(locator);
-            Common.GetElementText(locator);
+        }
+
+        public static string GetFirstName()
+        {
+            string locator = "//*[@id='loading']/text()[1]";
+            return Common.GetElementText(locator);
         }
     }
 }
